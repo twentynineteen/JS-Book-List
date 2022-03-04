@@ -80,7 +80,7 @@ class Store {
     const books = Store.getBooks();
     books.forEach(function (book, index) {
       if (book.isbn === isbn) {
-        books.splice(index);
+        books.splice(index, 1);
       }
     });
     localStorage.setItem("books", JSON.stringify(books));
